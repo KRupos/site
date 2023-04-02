@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+font-family: 'Century Gothic', sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Бургер-Менюшка */
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+}
+
+.header_body {
+    display: flex;
+    justify-content: end;
+    height: 50px;
+}
+
+.header_menu_btm {
+    height: 50px;
+    width: 140px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #963e3ecc;
+    cursor: pointer;
+}
+
+.header_menu_btm.active {
+    display: none;
+}
+
+.header_menu {
+    overflow: none;
+}
+
+.header_menu.active {
+    display: flex;
+    justify-content: space-around;
+    height: 200px;
+    width: 250px;
+    background-color: #963e3ecc;
+}
+
+.header_menu.active ul {
+    padding: 20px 0 0 0;
+}
+
+.close {
+    margin: 5px 0 0 0;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.close::after,
+.close::before {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 28px;
+    top: 15px;
+    height: 2px;
+    transition: all .2s linear;
+}
+
+.close::after {
+    transform: rotate(45deg);
+}
+
+.close::before {
+    transform: rotate(-45deg);
+}
+
+.header_list {
+    text-align: center;
+    font-size: 20px;
+    list-style: none;
+    line-height: 1.6;
+}
+
+.header_link {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+}
+
+.header_link:hover {
+    color: #ccc;
+}
+
+.header_menu_text {
+    color: #fff;
+    font-size: 20px;
+}
+
+.header_burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+    right: 0;
+}
+.header_burger span {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    transition: all .2s linear;
+}
+.header_burger::before,
+.header_burger::after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all .2s linear;
+}
+.header_burger::before {
+    top: 0;
+}
+.header_burger::after {
+    bottom: 0;
+}
+
+/* Первая секция */
+
+.main__page {
+    height: 785px;
+    width: 100%;
+    background: url(../img/bg/mainPage.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+.company {
+    position: absolute;
+    top: 0;
+}
+
+.company_logo img {
+    height: 120px;
+
+}
+
+.main__inner {
+    height: 785px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    color: #fff;
+}
+
+.main__text h1 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+/* вторая секция */
+
+.second__page {
+    height: 700px;
+}
+
+.second__inner {
+    padding: 20px 0 0 0;
+}
+
+.second__text {
+    padding: 30px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.second__heading h2 {
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.second__text__inner {
+    width: 48%;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.second__btm {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second_buttom {
+    color: #fff;
+    width: 250px;
+    height: 75px;
+    background: #963e3e;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Century Gothic', sans-serif;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.second_buttom:hover {
+    box-shadow: 5px 5px 0 rgb(70, 70, 70);
+}
